@@ -1,0 +1,11 @@
+<nav>
+  <ul>
+    {{#each links as |link|}}
+      <li>
+        {{#frost-link link.route design="in-line"}}
+          {{link.label}}
+        {{/frost-link}}
+      </li>
+    {{/each}}
+  </ul>
+</nav>
