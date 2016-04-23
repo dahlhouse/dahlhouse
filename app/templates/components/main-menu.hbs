@@ -1,11 +1,15 @@
-<nav>
-  <ul>
-    {{#each links as |link|}}
-      <li>
-        {{#frost-link link.route design="in-line"}}
-          {{link.label}}
-        {{/frost-link}}
-      </li>
-    {{/each}}
-  </ul>
-</nav>
+<ul>
+  {{#each links as |link|}}
+    <li>
+      {{#frost-link
+        link.route
+        priority="secondary"
+        size="medium"
+      }}
+        {{link.label}}
+      {{/frost-link}}
+    </li>
+  {{/each}}
+</ul>
+{{search-input}}
+<div style="clear:both"></div>

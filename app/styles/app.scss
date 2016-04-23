@@ -10,3 +10,44 @@ body {
     text-align: center;
   }
 }
+
+.frost-link.secondary {
+  border: 0;
+}
+
+.main-menu {
+  background-color: #fff;
+  text-align: left;
+
+  li {
+    display: inline-block;
+  }
+
+  ul {
+    float: left;
+    list-style-type: none;
+    margin: 0;
+  }
+
+  .search {
+    display: flex;
+    float: right;
+
+    button {
+      height: 38px;
+      margin: 1px 1px 0 0;
+    }
+
+    input {
+      height: 38px;
+    }
+
+    line, path {
+      fill: #fff;
+    }
+
+    .frost-text {
+      width: 300px;
+    }
+  }
+}

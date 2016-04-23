@@ -3,8 +3,10 @@ export default {
     mainMenu: {
       links: {
         about: 'About',
-        application: 'Home'
-      }
+        application: 'Home',
+        life: 'Life'
+      },
+      search: 'search…'
     }
   }
 }

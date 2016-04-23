@@ -4,10 +4,14 @@ import computed, {readOnly} from 'ember-computed-decorators'
 
 export const routes = [
   'application',
-  'about'
+  'about',
+  'life'
 ]
 
 export default Component.extend({
+  classNames: ['main-menu'],
+  tagName: 'nav',
+
   @readOnly
   @computed()
   links () {
