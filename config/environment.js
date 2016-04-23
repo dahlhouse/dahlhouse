@@ -6,6 +6,9 @@ module.exports = function (environment) {
       FEATURES: {}
     },
     environment: environment,
+    i18n: {
+      defaultLocale: 'en'
+    },
     locationType: 'auto',
     modulePrefix: 'dahlhouse'
   }

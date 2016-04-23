@@ -1,10 +1,8 @@
-/* jshint expr:true */
-import { expect } from 'chai';
-import {
-  describeComponent,
-  it
-} from 'ember-mocha';
-import hbs from 'htmlbars-inline-precompile';
+import {expect} from 'chai'
+import {describeComponent, it} from 'ember-mocha'
+import {beforeEach} from 'mocha'
+import hbs from 'htmlbars-inline-precompile'
+import {initialize} from 'dahlhouse/initializers/i18n'
 
 describeComponent(
   'main-menu',
@@ -12,19 +10,14 @@ describeComponent(
   {
     integration: true
   },
-  function() {
-    it('renders', function() {
-      // Set any properties with this.set('myProperty', 'value');
-      // Handle any actions with this.on('myAction', function(val) { ... });
-      // Template block usage:
-      // this.render(hbs`
-      //   {{#main-menu}}
-      //     template content
-      //   {{/main-menu}}
-      // `);
+  function () {
+    beforeEach(function () {
+      initialize(this)
+    })
 
-      this.render(hbs`{{main-menu}}`);
-      expect(this.$()).to.have.length(1);
-    });
+    it('renders', function () {
+      this.render(hbs`{{main-menu}}`)
+      expect(this.$()).to.have.length(1)
+    })
   }
-);
+)

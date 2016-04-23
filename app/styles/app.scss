@@ -1,3 +1,12 @@
 @import 'frost-theme';
 @import 'frost-app';
 @import 'typography';
+
+body {
+  background-color: #4b596c;
+  height: auto;
+
+  > div > header {
+    text-align: center;
+  }
+}
