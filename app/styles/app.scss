@@ -17,6 +17,21 @@ h1 {
   padding: 20px 0;
 }
 
+.app-bar {
+  background-color: #fff;
+  display: flex;
+  text-align: left;
+
+  .main-menu {
+    flex-grow: 1;
+  }
+
+  .search-input {
+    justify-content: flex-end; // Make sure search is aligned to the right
+  }
+}
+
+
 .frost-link.secondary {
   border: 0;
   color: $dark-color;
@@ -35,38 +50,34 @@ h1 {
 }
 
 .main-menu {
-  background-color: #fff;
-  text-align: left;
+  display: flex;
+  flex-wrap: nowrap; // Keep menu on one line
+  list-style-type: none;
+  margin: 0;
+  overflow: hidden; // Keep menu from being too wide
 
   li {
     display: inline-block;
   }
+}
 
-  ul {
-    float: left;
-    list-style-type: none;
-    margin: 0;
+.search-input {
+  display: flex;
+
+  .frost-button {
+    height: 38px;
+    margin: 1px 1px 0 0;
   }
 
-  .search {
-    display: flex;
-    float: right;
+  input {
+    height: 38px;
+  }
 
-    button {
-      height: 38px;
-      margin: 1px 1px 0 0;
-    }
+  line, path {
+    fill: #fff;
+  }
 
-    input {
-      height: 38px;
-    }
-
-    line, path {
-      fill: #fff;
-    }
-
-    .frost-text {
-      width: 300px;
-    }
+  .frost-text {
+    width: 300px;
   }
 }

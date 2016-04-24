@@ -5,7 +5,7 @@ import {mainRoutes} from '../router'
 
 export default Component.extend({
   classNames: ['main-menu'],
-  tagName: 'nav',
+  tagName: 'ul',
 
   @readOnly
   @computed()
