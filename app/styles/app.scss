@@ -2,17 +2,36 @@
 @import 'frost-app';
 @import 'typography';
 
+$dark-color: #4b596c;
+
 body {
-  background-color: #4b596c;
-  height: auto;
+  background-color: $dark-color;
 
   > div > header {
     text-align: center;
   }
 }
 
+h1 {
+  margin: 0;
+  padding: 20px 0;
+}
+
 .frost-link.secondary {
   border: 0;
+  color: $dark-color;
+
+  .text {
+    border-bottom-width: 2px;
+  }
+
+  &:hover:not(.disabled) {
+    background: transparent;
+
+    .text {
+      border-bottom-width: 2px;
+    }
+  }
 }
 
 .main-menu {

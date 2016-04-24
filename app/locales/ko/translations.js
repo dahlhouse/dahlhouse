@@ -3,13 +3,13 @@ export default {
     mainMenu: {
       links: {
         about: 'About', // TODO: translate
-        application: 'Casa',
+        application: '집',
         backyard: 'Backyard', // TODO: translate
         classroom: 'Classroom', // TODO: translate
-        kitchen: 'Cocina',
+        kitchen: 'Kitchen', // TODO: translate
         litterbox: 'Litterbox' // TODO: translate
       },
-      search: 'encontrar…'
+      search: 'Search' // TODO: translate
     }
   }
 }

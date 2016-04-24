@@ -5,9 +5,19 @@ const Router = Ember.Router.extend({
   location: config.locationType
 })
 
+// NOTE: routes should be in order they appear in menu
+export const mainRoutes = [
+  'about',
+  'kitchen',
+  'classroom',
+  'litterbox',
+  'backyard'
+]
+
 Router.map(function () {
-  this.route('about')
-  this.route('life')
+  mainRoutes.forEach((route) => {
+    this.route(route)
+  })
 })
 
 export default Router

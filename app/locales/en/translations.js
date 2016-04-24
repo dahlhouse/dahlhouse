@@ -4,7 +4,10 @@ export default {
       links: {
         about: 'About',
         application: 'Home',
-        life: 'Life'
+        backyard: 'Backyard',
+        classroom: 'Classroom',
+        kitchen: 'Kitchen',
+        litterbox: 'Litterbox'
       },
       search: 'search…'
     }
