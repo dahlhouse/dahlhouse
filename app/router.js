@@ -1,22 +1,14 @@
 import Ember from 'ember'
 import config from './config/environment'
+import navigation from './fixtures/navigation'
 
 const Router = Ember.Router.extend({
   location: config.locationType
 })
 
-// NOTE: routes should be in order they appear in menu
-export const mainRoutes = [
-  'about',
-  'kitchen',
-  'classroom',
-  'litterbox',
-  'backyard'
-]
-
 Router.map(function () {
-  mainRoutes.forEach((route) => {
-    this.route(route)
+  navigation.forEach((routeItem) => {
+    this.route(routeItem.route)
   })
 })
 
