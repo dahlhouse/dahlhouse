@@ -7,7 +7,8 @@ export default {
         backyard: 'Backyard', // TODO: translate
         classroom: 'Classroom', // TODO: translate
         kitchen: 'Cocina',
-        litterbox: 'Litterbox' // TODO: translate
+        litterbox: 'Litterbox', // TODO: translate
+        more: '…'
       },
       search: 'encontrar…'
     }

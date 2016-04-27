@@ -7,7 +7,8 @@ export default {
         backyard: 'Backyard',
         classroom: 'Classroom',
         kitchen: 'Kitchen',
-        litterbox: 'Litterbox'
+        litterbox: 'Litterbox',
+        more: '…'
       },
       search: 'search…'
     }

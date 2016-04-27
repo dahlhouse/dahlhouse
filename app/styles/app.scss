@@ -55,9 +55,18 @@ h1 {
   list-style-type: none;
   margin: 0;
   overflow: hidden; // Keep menu from being too wide
+  padding: 0;
 
   li {
     display: inline-block;
+  }
+
+  .frost-link > .content {
+    min-width: inherit;
+  }
+
+  .hide {
+    display: none;
   }
 }
 

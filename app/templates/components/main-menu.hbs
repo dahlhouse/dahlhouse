@@ -1,5 +1,14 @@
+<li class="icon">
+  {{#frost-link
+    "application"
+    priority="secondary"
+    size="medium"
+  }}
+    {{frost-icon icon="frost/home"}}
+  {{/frost-link}}
+</li>
 {{#each links as |link|}}
-  <li>
+  <li class="text">
     {{#frost-link
       link.route
       priority="secondary"
@@ -9,3 +18,11 @@
     {{/frost-link}}
   </li>
 {{/each}}
+<li class="icon">
+  {{#frost-button
+    priority="tertiary"
+    size="medium"
+  }}
+    {{t "layout.mainMenu.links.more"}}
+  {{/frost-button}}
+</li>
