@@ -1,15 +1,21 @@
 import Ember from 'ember'
 import config from './config/environment'
-import navigation from './fixtures/navigation'
+import routes from './fixtures/routes'
 
 const Router = Ember.Router.extend({
   location: config.locationType
 })
 
-Router.map(function () {
-  navigation.forEach((routeItem) => {
-    this.route(routeItem.route)
+function addRoute (routeItem) {
+  this.route(routeItem.route, function () {
+    if (routeItem.children) {
+      routeItem.children.forEach(addRoute.bind(this))
+    }
   })
+}
+
+Router.map(function () {
+  routes.forEach(addRoute.bind(this))
 })
 
 export default Router

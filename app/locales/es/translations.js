@@ -2,12 +2,22 @@ export default {
   layout: {
     mainMenu: {
       links: {
-        about: 'About', // TODO: translate
+        about: {
+          text: 'About' // TODO: translate
+        },
         application: 'Casa',
-        backyard: 'Backyard', // TODO: translate
-        classroom: 'Classroom', // TODO: translate
-        kitchen: 'Cocina',
-        litterbox: 'Litterbox', // TODO: translate
+        backyard: {
+          text: 'Backyard' // TODO: translate
+        },
+        classroom: {
+          text: 'Classroom' // TODO: translate
+        },
+        kitchen: {
+          text: 'Cocina'
+        },
+        litterbox: {
+          text: 'Litterbox' // TODO: translate
+        },
         more: '…'
       },
       search: 'encontrar…'

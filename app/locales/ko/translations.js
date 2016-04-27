@@ -2,12 +2,22 @@ export default {
   layout: {
     mainMenu: {
       links: {
-        about: 'About', // TODO: translate
+        about: {
+          text: 'About' // TODO: translate
+        },
         application: '집',
-        backyard: 'Backyard', // TODO: translate
-        classroom: 'Classroom', // TODO: translate
-        kitchen: 'Kitchen', // TODO: translate
-        litterbox: 'Litterbox', // TODO: translate
+        backyard: {
+          text: 'Backyard' // TODO: translate
+        },
+        classroom: {
+          text: 'Classroom' // TODO: translate
+        },
+        kitchen: {
+          text: 'Kitchen' // TODO: translate
+        },
+        litterbox: {
+          text: 'Litterbox' // TODO: translate
+        },
         more: '…'
       },
       search: 'Search' // TODO: translate

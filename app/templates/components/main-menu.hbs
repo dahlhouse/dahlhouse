@@ -7,16 +7,11 @@
     {{frost-icon icon="frost/home"}}
   {{/frost-button}}
 </li>
-{{#each links as |link|}}
-  <li class="text">
-    {{#frost-link
-      link.route
-      priority="secondary"
-      size="medium"
-    }}
-      {{link.label}}
-    {{/frost-link}}
-  </li>
+{{#each routes as |routeInfo|}}
+  {{menu-item
+    relativePath=""
+    routeInfo=routeInfo
+  }}
 {{/each}}
 <li class="icon">
   {{#frost-button

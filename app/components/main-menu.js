@@ -1,7 +1,7 @@
 import Ember from 'ember'
 const {Component} = Ember
 import computed, {readOnly} from 'ember-computed-decorators'
-import navigation from '../fixtures/navigation'
+import routes from '../fixtures/routes'
 
 export default Component.extend({
   classNames: ['main-menu'],
@@ -9,13 +9,8 @@ export default Component.extend({
 
   @readOnly
   @computed()
-  links () {
-    return navigation.map((routeItem) => {
-      return {
-        label: this.get('i18n').t(`layout.mainMenu.links.${routeItem.route}`),
-        route: routeItem.route
-      }
-    })
+  routes () {
+    return routes
   },
 
   updateLinks () {

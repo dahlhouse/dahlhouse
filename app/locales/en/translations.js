@@ -2,12 +2,22 @@ export default {
   layout: {
     mainMenu: {
       links: {
-        about: 'About',
+        about: {
+          text: 'About'
+        },
         application: 'Home',
-        backyard: 'Backyard',
-        classroom: 'Classroom',
-        kitchen: 'Kitchen',
-        litterbox: 'Litterbox',
+        backyard: {
+          text: 'Backyard'
+        },
+        classroom: {
+          text: 'Classroom'
+        },
+        kitchen: {
+          text: 'Kitchen'
+        },
+        litterbox: {
+          text: 'Litterbox'
+        },
         more: '…'
       },
       search: 'search…'
