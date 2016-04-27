@@ -57,8 +57,23 @@ h1 {
   overflow: hidden; // Keep menu from being too wide
   padding: 0;
 
+  .frost-link.secondary:focus {
+    box-shadow: none;
+    outline: 0;
+  }
+
   li {
     display: inline-block;
+
+    .text {
+      border-top: 2px solid transparent;
+    }
+  }
+
+  li.icon {
+    .text {
+      display: flex;
+    }
   }
 
   .frost-link > .content {
