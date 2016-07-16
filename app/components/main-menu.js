@@ -1,3 +1,4 @@
+/* global $ */
 import Ember from 'ember'
 const {Component} = Ember
 import computed, {readOnly} from 'ember-computed-decorators'
@@ -14,6 +15,7 @@ export default Component.extend({
   },
 
   updateLinks () {
+    /*
     let lastElementIndex
     let usedWidth = 0
     const $ul = this.$()
@@ -45,6 +47,7 @@ export default Component.extend({
 
     const showMoreMenu = usedWidth > availableWidth
     $moreItem.toggle(showMoreMenu)
+    */
   },
 
   didInsertElement () {

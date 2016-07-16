@@ -2,7 +2,7 @@ import {expect} from 'chai'
 import {describeComponent, it} from 'ember-mocha'
 import {beforeEach} from 'mocha'
 import hbs from 'htmlbars-inline-precompile'
-import {initialize} from 'dahlhouse/initializers/i18n'
+import {stubService} from 'dahlhouse/tests/helpers'
 
 describeComponent(
   'app-bar',
@@ -12,7 +12,7 @@ describeComponent(
   },
   function () {
     beforeEach(function () {
-      initialize(this)
+      stubService(this, 'i18n')
     })
 
     it('renders', function () {

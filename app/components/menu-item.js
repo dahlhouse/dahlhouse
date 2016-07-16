@@ -1,9 +1,10 @@
 import Ember from 'ember'
 const {Component} = Ember
 import computed, {readOnly} from 'ember-computed-decorators'
-import PropTypeMixin, {PropTypes} from 'ember-prop-types'
+import {PropTypes} from 'ember-prop-types'
 
-export default Component.extend(PropTypeMixin, {
+export default Component.extend({
+  classNames: ['menu-item'],
   tagName: 'li',
 
   propTypes: {
@@ -13,15 +14,18 @@ export default Component.extend(PropTypeMixin, {
 
   @readOnly
   @computed('relativePath', 'routeInfo')
-  text (relativePath, routeInfo) {
-    let key = 'layout.mainMenu.links'
-
+  routePath (relativePath, routeInfo) {
     if (relativePath) {
-      key += `.${relativePath}`
+      return `${relativePath}.${routeInfo.route}`
     }
 
-    key += `.${routeInfo.route}.text`
+    return routeInfo.route
+  },
 
+  @readOnly
+  @computed('routePath')
+  text (routePath) {
+    let key = `layout.mainMenu.links.${routePath}.text`
     return this.get('i18n').t(key)
   }
 })

@@ -10,6 +10,15 @@ export default {
           text: 'Backyard' // TODO: translate
         },
         classroom: {
+          about: {
+            text: 'About Hye Bin' // TODO: translate
+          },
+          admissions: {
+            text: 'College Admissions' // TODO: translate
+          },
+          sat: {
+            text: 'SAT'
+          },
           text: 'Classroom' // TODO: translate
         },
         kitchen: {

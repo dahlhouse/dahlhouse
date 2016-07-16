@@ -1,8 +1,11 @@
-@import 'frost-theme';
-@import 'frost-app';
-@import 'typography';
+@import 'node_modules/ember-frost-core/addon/styles/addon';
 
+$app-bar-background-color: #fff;
 $dark-color: #4b596c;
+$h1-margin: 0;
+$main-menu-margin: 0;
+$search-button-margin: 1px 1px 0 0;
+$search-input-svg-fill: #fff;
 
 body {
   background-color: $dark-color;
@@ -13,13 +16,13 @@ body {
 }
 
 h1 {
-  margin: 0;
+  margin: $h1-margin;
   padding: 20px 0;
 }
 
 .app-bar {
-  background-color: #fff;
   display: flex;
+  background-color: $app-bar-background-color;
   text-align: left;
 
   .main-menu {
@@ -32,19 +35,23 @@ h1 {
 }
 
 
-.frost-link.secondary {
-  border: 0;
-  color: $dark-color;
-
-  .text {
-    border-bottom-width: 2px;
-  }
-
-  &:hover:not(.disabled) {
-    background: transparent;
+.frost-link {
+  &.secondary {
+    border: 0;
+    color: $dark-color;
 
     .text {
       border-bottom-width: 2px;
+    }
+
+    &:hover {
+      &:not(.disabled) {
+        background: transparent;
+
+        .text {
+          border-bottom-width: 2px;
+        }
+      }
     }
   }
 }
@@ -52,14 +59,18 @@ h1 {
 .main-menu {
   display: flex;
   flex-wrap: nowrap; // Keep menu on one line
-  list-style-type: none;
-  margin: 0;
-  overflow: hidden; // Keep menu from being too wide
+  margin: $main-menu-margin;
   padding: 0;
+  overflow: hidden; // Keep menu from being too wide
+  list-style-type: none;
 
-  .frost-link.secondary:focus {
-    box-shadow: none;
-    outline: 0;
+  .frost-link {
+    &.secondary {
+      &:focus {
+        outline: 0;
+        box-shadow: none;
+      }
+    }
   }
 
   li {
@@ -68,11 +79,11 @@ h1 {
     .text {
       border-top: 2px solid transparent;
     }
-  }
 
-  li.icon {
-    .text {
-      display: flex;
+    &.icon {
+      .text {
+        display: flex;
+      }
     }
   }
 
@@ -85,20 +96,35 @@ h1 {
   }
 }
 
+.menu-item {
+  > ul {
+    display: none;
+    position: absolute;
+    float: left;
+  }
+
+  &:hover {
+    ul {
+      display: block;
+    }
+  }
+}
+
 .search-input {
   display: flex;
 
   .frost-button {
     height: 38px;
-    margin: 1px 1px 0 0;
+    margin: $search-button-margin;
   }
 
   input {
     height: 38px;
   }
 
-  line, path {
-    fill: #fff;
+  line,
+  path {
+    fill: $search-input-svg-fill;
   }
 
   .frost-text {

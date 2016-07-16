@@ -10,6 +10,15 @@ export default {
           text: 'Backyard'
         },
         classroom: {
+          about: {
+            text: 'About Hye Bin'
+          },
+          admissions: {
+            text: 'College Admissions'
+          },
+          sat: {
+            text: 'SAT'
+          },
           text: 'Classroom'
         },
         kitchen: {
