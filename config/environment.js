@@ -21,15 +21,11 @@ module.exports = function (environment) {
       break
 
     case 'test':
-      Object.assign(ENV, {
-        baseUrl: '/',
-        locationType: 'none'
-      })
-      Object.assign(ENV.APP, {
-        LOG_ACTIVE_GENERATION: false,
-        LOG_VIEW_LOOKUPS: false,
-        rootElement: '#ember-testing'
-      })
+      ENV.baseUrl = '/'
+      ENV.locationType = 'none'
+      ENV.APP.LOG_ACTIVE_GENERATION = false
+      ENV.APP.LOG_VIEW_LOOKUPS = false
+      ENV.app.rootElement = '#ember-testing'
       break
   }
 
