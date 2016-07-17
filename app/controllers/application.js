@@ -1,7 +1,9 @@
 import Ember from 'ember'
-const {Controller} = Ember
+const {Controller, inject} = Ember
 
 export default Controller.extend({
+  i18n: inject.service(),
+
   queryParams: ['lang'],
   lang: null,
 

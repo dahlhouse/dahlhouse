@@ -1,22 +1,17 @@
 /* global $ */
 import Ember from 'ember'
-const {Component} = Ember
-import computed, {readOnly} from 'ember-computed-decorators'
+const {Component, inject} = Ember
 import routes from '../fixtures/routes'
 
 export default Component.extend({
+  i18n: inject.service(),
+
   classNames: ['main-menu'],
   tagName: 'ul',
 
-  @readOnly
-  @computed()
-  routes () {
-    return routes
-  },
+  routes,
 
   updateLinks () {
-    /*
-    let lastElementIndex
     let usedWidth = 0
     const $ul = this.$()
     const $linkItems = $ul.find('li:not(:last)')
@@ -47,7 +42,6 @@ export default Component.extend({
 
     const showMoreMenu = usedWidth > availableWidth
     $moreItem.toggle(showMoreMenu)
-    */
   },
 
   didInsertElement () {

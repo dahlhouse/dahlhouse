@@ -1,9 +1,11 @@
 import Ember from 'ember'
-const {Component} = Ember
+const {Component, inject} = Ember
 import computed, {readOnly} from 'ember-computed-decorators'
 import {PropTypes} from 'ember-prop-types'
 
 export default Component.extend({
+  i18n: inject.service(),
+
   classNames: ['menu-item'],
   tagName: 'li',
 
