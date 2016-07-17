@@ -17,7 +17,10 @@
     "test": "npm run lint && npm run utest",
     "utest": "COVERAGE=true ember test"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dahlhouse/dahlhouse.git"
+  },
   "engines": {
     "node": ">= 5.0.0"
   },
