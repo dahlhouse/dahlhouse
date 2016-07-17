@@ -25,7 +25,7 @@ module.exports = function (environment) {
       ENV.locationType = 'none'
       ENV.APP.LOG_ACTIVE_GENERATION = false
       ENV.APP.LOG_VIEW_LOOKUPS = false
-      ENV.app.rootElement = '#ember-testing'
+      ENV.APP.rootElement = '#ember-testing'
       break
   }
 
