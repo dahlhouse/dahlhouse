@@ -45,7 +45,7 @@
     "ember-data": "2.7.0",
     "ember-disable-prototype-extensions": "1.1.0",
     "ember-export-application-global": "1.0.5",
-    "ember-frost-core": "0.17.2",
+    "ember-frost-core": "0.19.2",
     "ember-i18n": "4.2.2",
     "ember-load-initializers": "0.5.1",
     "ember-lodash": "0.0.10",
