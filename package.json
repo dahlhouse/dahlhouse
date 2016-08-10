@@ -27,7 +27,7 @@
   "author": "Matthew Dahl (https://github.com/sandersky)",
   "license": "MIT",
   "devDependencies": {
-    "broccoli-asset-rev": "2.4.5",
+    "broccoli-asset-rev": "2.4.6",
     "ember-browserify": "1.1.11",
     "ember-cli": "2.7.0",
     "ember-cli-app-version": "2.0.0",
